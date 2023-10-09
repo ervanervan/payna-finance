@@ -6,7 +6,7 @@ const Input = () => {
       <input
         type="text"
         placeholder="Email Address"
-        className="rounded-full w-full py-3 px-6 text-base mb-3 appearance-none bg-bgGray outline-none focus:ring-2"
+        className="rounded-full w-full py-3 px-6 text-base appearance-none bg-bgGray outline-none"
       />
     </div>
   );
