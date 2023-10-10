@@ -8,7 +8,9 @@ const FeatureItem = ({ title, desc, imgUrl }) => {
       </div>
       <div className="flex-1">
         <h4 className="font-semibold text-xl text-textBlack mb-3">{title}</h4>
-        <p className="text-textGray text-base leading-8 sm:w-52">{desc}</p>
+        <p className="text-textGray text-base leading-8 sm:w-52 lg:w-60">
+          {desc}
+        </p>
       </div>
     </div>
   );

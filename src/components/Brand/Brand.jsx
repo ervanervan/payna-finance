@@ -7,10 +7,10 @@ import brandSpotify from "../../assets/brand_spotify.svg";
 
 const Brand = () => {
   return (
-    <div className="mt-12 sm:mt-16">
+    <div className="mt-12 sm:mt-16 xl:flex xl:items-center xl:justify-between xl:mx-10">
       <div>
-        <h2 className="font-semibold text-textBlack text-base mb-7">
-          Trusted by Global Companies
+        <h2 className="font-semibold text-textBlack text-base mb-7 xl:mb-0 xl:text-left xl:flex xl:flex-col">
+          Trusted by <span> Global Companies </span>
         </h2>
       </div>
       <div className="flex flex-wrap gap-6 sm:gap-12 sm:items-center sm:justify-center">
