@@ -4,7 +4,10 @@ import { Features } from "../../Data";
 
 const Feature = () => {
   return (
-    <section id="features" className="py-20 px-6 sm:py-32 sm:px-10">
+    <section
+      id="features"
+      className="container mx-auto py-20 px-6 sm:py-32 sm:px-10"
+    >
       <div className="text-center">
         <h4 className="text-textRed font-bold text-base mb-1">WORK BETTER</h4>
         <h2 className="text-textBlack font-bold text-2xl sm:text-3xl mb-5">

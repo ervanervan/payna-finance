@@ -4,7 +4,7 @@ import Brand from "../Brand/Brand";
 
 const Hero = () => {
   return (
-    <section className="px-6 sm:px-10">
+    <section className="px-6 sm:px-10 container mx-auto">
       <div className="mt-2 sm:mt-14 sm:text-center">
         <h1 className="font-bold text-4xl text-textBlack mb-5 sm:text-5xl sm:px-28 sm:leading-[4rem]">
           Manage Payroll Like an Expert

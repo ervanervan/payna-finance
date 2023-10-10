@@ -6,7 +6,7 @@ import Input from "../Input/Input";
 const Contact = () => {
   return (
     <section>
-      <div className="px-6 py-4 flex justify-center">
+      <div className="container mx-auto px-6 py-4 flex justify-center">
         <img src={contactImg} alt="image contact" className="w-80 sm:w-3/4" />
       </div>
       <div className="my-11 text-center px-6">
