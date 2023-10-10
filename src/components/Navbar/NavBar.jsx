@@ -53,7 +53,7 @@ const NavBar = () => {
         x-transition:leave="transition ease-in duration-300"
         x-transition:leave-start="opacity-100 scale-100"
         x-transition:leave-end="opacity-0 scale-90"
-        className="fixed bottom-0 left-0 right-0 p-4 border-t bg-white shadow-2xl bg-opacity-80 backdrop-blur-md sm:hidden"
+        className="fixed bottom-0 left-0 right-0 p-4 border-t bg-white shadow-2xl sm:hidden"
       >
         <ul className="flex items-center justify-around text-textBlack">
           <li>
