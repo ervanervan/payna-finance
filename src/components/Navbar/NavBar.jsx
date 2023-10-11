@@ -11,10 +11,12 @@ const NavBar = () => {
       x-data="{navOpen : false}"
     >
       <nav className="px-6 py-10 sm:p-10 flex items-center justify-between">
-        <div className="flex">
-          <img src={logo} alt="logo-payna" className="w-12 mr-3" />
-          <h1 className="text-textBlack font-semibold text-2xl">Payna</h1>
-        </div>
+        <a href="#">
+          <div className="flex">
+            <img src={logo} alt="logo-payna" className="w-12 mr-3" />
+            <h1 className="text-textBlack font-semibold text-2xl">Payna</h1>
+          </div>
+        </a>
         <div className="hidden sm:block">
           <ul className="flex items-center justify-center sm:gap-4 md:gap-8 lg:gap-14 text-textBlack">
             <li className="hover:text-bgNavy duration-300">
