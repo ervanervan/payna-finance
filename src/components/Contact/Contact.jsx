@@ -24,7 +24,7 @@ const Contact = () => {
           Your employees can bring any success into your business, so we need to
           take care of them
         </p>
-        <div className="mt-11 flex flex-col sm:items-center gap-3 justify-center lg:justify-normal sm:flex-row mb-28 lg:m-0">
+        <div className="mt-11 flex flex-col sm:items-center gap-3 justify-center lg:justify-normal sm:flex-row lg:m-0">
           <Input />
           <Button isPrimary>Get Started</Button>
         </div>

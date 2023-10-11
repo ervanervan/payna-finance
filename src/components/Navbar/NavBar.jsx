@@ -1,15 +1,9 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo_payna.svg";
 import Button from "../Button/Button";
-import { Menu, Home, CardWallet, BrightStar, Computer } from "iconoir-react";
+import { Cancel, Menu } from "iconoir-react";
 
 const NavBar = () => {
-  const [activeItem, setActiveItem] = useState("home");
-
-  const handleItemClick = (itemName) => {
-    setActiveItem(itemName);
-  };
-
   return (
     <header
       id="home"
@@ -37,7 +31,10 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div x-on:click="navOpen = !navOpen" className="sm:hidden">
+        <div
+          x-on:click="navOpen = !navOpen"
+          className="sm:hidden cursor-pointer"
+        >
           <Menu />
         </div>
         <div className="hidden sm:block">
@@ -47,75 +44,34 @@ const NavBar = () => {
       <div
         x-data="{open : false}"
         x-show="navOpen"
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 scale-90"
-        x-transition:enter-end="opacity-100 scale-100"
-        x-transition:leave="transition ease-in duration-300"
-        x-transition:leave-start="opacity-100 scale-100"
-        x-transition:leave-end="opacity-0 scale-90"
-        className="fixed bottom-0 left-0 right-0 p-4 border-t bg-white shadow-2xl sm:hidden"
+        x-transition:enter="transition ease-out duration-300 transform origin-right"
+        x-transition:enter-start="opacity-0 translate-x-full"
+        x-transition:enter-end="opacity-100 translate-x-0"
+        x-transition:leave="transition ease-in duration-300 transform origin-left"
+        x-transition:leave-start="opacity-100 translate-x-0"
+        x-transition:leave-end="opacity-0 translate-x-full"
+        className="fixed w-3/4 h-screen top-0 right-0 px-6 py-20 bg-white shadow-2xl sm:hidden flex flex-col items-center gap-10 text-textBlack justify-center"
       >
-        <ul className="flex items-center justify-around text-textBlack">
-          <li>
-            <a
-              href="#home"
-              className={`flex justify-center gap-1 items-center flex-col ${
-                activeItem === "home" ? "text-bgNavy" : ""
-              }`}
-              onClick={() => handleItemClick("home")}
-            >
-              <Home />
-              <span>Home</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#features"
-              className={`flex justify-center gap-1 items-center flex-col ${
-                activeItem === "features" ? "text-bgNavy" : ""
-              }`}
-              onClick={() => handleItemClick("features")}
-            >
-              <BrightStar />
-              <span>Features</span>
-            </a>
-          </li>
-          <li x-on:click="open = !open">
-            <a
-              href="#showcase"
-              className={`flex justify-center gap-1 items-center flex-col ${
-                activeItem === "showcase" ? "text-bgNavy" : ""
-              }`}
-              onClick={() => handleItemClick("showcase")}
-            >
-              <Computer />
-              <span>Showcase</span>
-            </a>
-          </li>
-          <li x-on:click="open = !open">
-            <a
-              href="#pricing"
-              className={`flex justify-center gap-1 items-center flex-col ${
-                activeItem === "pricing" ? "text-bgNavy" : ""
-              }`}
-              onClick={() => handleItemClick("pricing")}
-            >
-              <CardWallet />
-              <span>Pricing</span>
-            </a>
-          </li>
-        </ul>
-        <div
-          x-show="open"
-          x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 scale-90"
-          x-transition:enter-end="opacity-100 scale-100"
-          x-transition:leave="transition ease-in duration-300"
-          x-transition:leave-start="opacity-100 scale-100"
-          x-transition:leave-end="opacity-0 scale-90"
-          className="absolute bottom-24 left-1/2 -translate-x-1/2"
-        >
+        <li className="list-none hover:text-bgNavy duration-300">
+          <a href="#home">Home</a>
+        </li>
+        <li className="list-none hover:text-bgNavy duration-300">
+          <a href="#features">Features</a>
+        </li>
+        <li className="list-none hover:text-bgNavy duration-300">
+          <a href="#showcase">Showcase</a>
+        </li>
+        <li className="list-none hover:text-bgNavy duration-300">
+          <a href="#pricing">Pricing</a>
+        </li>
+        <div className="list-none">
           <Button isSecondary>Sign In</Button>
+        </div>
+        <div
+          x-on:click="navOpen = !navOpen"
+          className="absolute top-10 right-5 cursor-pointer"
+        >
+          <Cancel width={30} height={30} />
         </div>
       </div>
     </header>
