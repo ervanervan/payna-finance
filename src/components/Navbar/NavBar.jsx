@@ -64,7 +64,7 @@ const NavBar = () => {
         <li className="list-none hover:text-bgNavy duration-300">
           <a href="#pricing">Pricing</a>
         </li>
-        <div className="list-none">
+        <div>
           <Button isSecondary>Sign In</Button>
         </div>
         <div
